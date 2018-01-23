@@ -1,0 +1,11 @@
+打开host文件
+
+    sudo gedit /etc/hosts
+
+添加你需要的项，格式如下：
+
+    216.239.37.99   www.google.com
+
+编辑后，你需要重新启动一下你的网络。
+
+    sudo /etc/init.d/networking restart

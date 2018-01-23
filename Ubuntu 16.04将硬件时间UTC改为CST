@@ -1,0 +1,23 @@
+在安装Ubuntu双系统的情况下，Ubuntu的时间总会和Windows的时间相差8小时，原因在于widows认为BIOS时间是本地时间，Ubuntu认为BIOS时间是UTC时间，这样从Ubuntu重启到ubuntu会发现时间相差8小时，Ubuntu会经常与NTP服务器时间进行同步，但Windows不会。
+
+所以我们需要将Ubuntu的时间改成本地时间
+
+以前的方法是
+
+编辑/etc/default/rcS 将UTC=yes改成UTC=no
+
+Ubuntu 16.04使用systemd启动之后，时间也改成了由timedatectl来管理
+
+更改方法是执行
+
+timedatectl set-local-rtc 1 --adjust-system-clock 最后重启
+
+
+
+  网上同步时间
+1.安装ntpdate工具
+sudo apt-get install ntpdate
+2.设置系统时间与网络时间同步
+sudo ntpdate cn.pool.ntp.org
+ 3.将系统时间写入硬件时间
+sudo hwclock -w

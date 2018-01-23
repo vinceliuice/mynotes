@@ -1,0 +1,27 @@
+## 系统软件
+synaptic apt-xapian-index gdebi
+
+## 图像
+gimp inkscape
+
+## 组件
+p7zip p7zip-full p7zip-rar gstreamer1.0-fluendo-mp3 gstreamer1.0-libav gstreamer1.0-nice gstreamer1.0-bad gstreamer1.0-ugly adobe-flashplugin
+
+
+## 主题
+arc-theme numix-gtk-theme breeze-icon-theme breeze-cursor-theme faba-icon-theme faenza-icon-theme numix-icon-theme
+
+## 系统软件插件
+gedit-plugins rhythmbox-plugin-alternative-toolbar rhythmbox-plugin-magnatune nautilus-admin
+
+## 卸载楷体和宋体字让网页显示默认字体
+remove fonts-arphic-uming fonts-arphic-ukai
+
+## ubuntu14.04源
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+

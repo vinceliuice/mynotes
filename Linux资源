@@ -1,0 +1,40 @@
+	软件资源
+
+install via the official uGet PPA
+sudo add-apt-repository ppa:plushuang-tw/uget-stable
+sudo apt update
+sudo apt install uget
+Beta/Development PPA
+
+sudo add-apt-repository ppa:plushuang-tw/uget-devel
+sudo apt update
+sudo apt install uget
+
+使用如下 PPA 安装 uget-chrome-wrapper
+sudo add-apt-repository ppa:slgobinath/uget-chrome-wrapper
+sudo apt update
+sudo apt install uget-chrome-wrapper
+
+Install GNOME in Ubuntu
+sudo add-apt-repository ppa:gnome3-team/gnome3-staging
+sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+	主题资源
+
+1 adapta-gtk-themeAn adaptive Gtk+ theme based on Material Design Guidelines 
+Github: https://github.com/adapta-project/adapta-gtk-theme
+
+sudo add-apt-repository ppa:tista/adapta 
+sudo apt-get update
+
+2 numix
+sudo add-apt-repository ppa:numix/ppa
+
+3 moka
+sudo add-apt-repository ppa:moka/daily
+
+4 paper
+sudo add-apt-repository ppa:snwh/pulp
+
