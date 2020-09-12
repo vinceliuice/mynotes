@@ -26,3 +26,9 @@
 　　2.2 将当前目录下的所有文件内的“garden”替换成“mirGarden”
 
 　　## sed -i "s/garden/mirGarden/g" `ls` //其实也就是ls出多个文件名而已
+　　
+3. manjaro 切换sddm到gdm
+
+sudo systemctl disable sddm.service
+
+sudo systemctl enable gdm.service
