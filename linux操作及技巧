@@ -1,5 +1,5 @@
 #创建相对链接
-	ln -s 路径/目标 目标链接
+  ln -s 路径/目标 目标链接
 
 #linux下批量替换文件内容
 
@@ -26,9 +26,25 @@
 　　2.2 将当前目录下的所有文件内的“garden”替换成“mirGarden”
 
 　　## sed -i "s/garden/mirGarden/g" `ls` //其实也就是ls出多个文件名而已
-　　
+
 3. manjaro 切换sddm到gdm
 
 sudo systemctl disable sddm.service
 
 sudo systemctl enable gdm.service
+
+4. GTK+ Inspector
+
+If you are using Debian or Ubuntu or a distro based on those, make sure you have libgtk-3-dev installed as it’s required to use the GTK+ Inspector. (At least that’s true for Debian 8 “jessie”, Debian 9 “stretch” and Ubuntu 17.04 and older).
+
+5. gtk4 theme on flatpak (libadwaita)
+
+Also if you trying this in a flatpak app, you need to give the permission to access this file, otherwise it won't work.
+
+local: flatpak override --user --filesystem=xdg-config/gtk-4.0
+
+global: flatpak override --filesystem=xdg-config/gtk-4.0
+
+6. test theme on liadwaita
+
+GTK_THEME=WhiteSur-dark-blue:dark adwaita-1-demo

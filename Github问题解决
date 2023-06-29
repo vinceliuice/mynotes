@@ -1,0 +1,10 @@
+###亲测近日 GFW 或者其他组织又开始阻止墙内人员接触github了（据说是什么度的网页内嵌代码被密谋篡改导致了对hub的DDOS打击，目测战况惨烈），直接导致
+
+fatal: unable to access 'https://github.com/*/*.git/': Empty reply from server
+
+###大概的解决办法是修改HTTPS链接为SSH访问，step如下：
+
+$ git remote set-url origin git@github.com:USERNAME/OTHERREPOSITORY.git
+
+
+https://blog.csdn.net/ywl470812087/article/details/104459288
