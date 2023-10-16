@@ -2,9 +2,9 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=Tela
+THEME_NAME=Vimix
 
-_THEME_VARIANTS=('' '-red' '-pink' '-purple' '-blue' '-green' '-yellow' '-orange' '-brown' '-grey' '-black' '-manjaro' '-ubuntu')
+_THEME_VARIANTS=('' '-Amethyst' '-Beryl' '-Black' '-Doder' '-Ruby' '-Jade' '-White')
 
 if [ ! -z "${THEME_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _THEME_VARIANTS <<< "${THEME_VARIANTS:-}"

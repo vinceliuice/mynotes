@@ -2,9 +2,9 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=McMojave-circle
+THEME_NAME=Tela-circle
 
-_THEME_VARIANTS=('' '-red' '-pink' '-purple' '-blue' '-green' '-yellow' '-orange' '-brown' '-grey' '-black')
+_THEME_VARIANTS=('' '-dracula' '-purple' '-blue' '-black' '-manjaro' '-ubuntu' '-nord')
 
 if [ ! -z "${THEME_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _THEME_VARIANTS <<< "${THEME_VARIANTS:-}"
@@ -17,7 +17,7 @@ Tar_themes() {
   done
 
   for theme in "${_THEME_VARIANTS[@]}"; do
-    tar -cf ${THEME_NAME}${theme}.tar ${THEME_NAME}${theme} ${THEME_NAME}${theme}-dark
+    tar -cf ${THEME_NAME}${theme}.tar ${THEME_NAME}${theme} ${THEME_NAME}${theme}-dark ${THEME_NAME}${theme}-light
   done
 }
 

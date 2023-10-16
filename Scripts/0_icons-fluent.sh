@@ -2,9 +2,9 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=Qogir
+THEME_NAME=Fluent
 
-_THEME_VARIANTS=('' '-manjaro' '-ubuntu')
+_THEME_VARIANTS=('' '-red' '-pink' '-purple' '-green' '-yellow' '-orange' '-grey' '-teal')
 
 if [ ! -z "${THEME_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _THEME_VARIANTS <<< "${THEME_VARIANTS:-}"

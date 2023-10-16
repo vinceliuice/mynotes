@@ -6,6 +6,7 @@ THEME_NAME=vimix
 
 _COLOR_VARIANTS=('' '-light' '-dark')
 _COMPA_VARIANTS=('' '-laptop')
+_THEME_VARIANTS=('-grey' '-doder' '-beryl' '-ruby' '-jade' '-amethyst')
 
 if [ ! -z "${COMPA_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COMPA_VARIANTS <<< "${COMPA_VARIANTS:-}"
@@ -15,26 +16,24 @@ if [ ! -z "${COLOR_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
 fi
 
+if [ ! -z "${THEME_VARIANTS:-}" ]; then
+  IFS=', ' read -r -a _THEME_VARIANTS <<< "${THEME_VARIANTS:-}"
+fi
+
 Tar_themes() {
-  for color in "${_COLOR_VARIANTS[@]}"; do
-    for compact in "${_COMPA_VARIANTS[@]}"; do
-      rm -rf ${THEME_NAME}${color}${compact}.tar
-      rm -rf ${THEME_NAME}${color}${compact}.tar.xz
-    done
+  for theme in "${_THEME_VARIANTS[@]}"; do
+      rm -rf ${THEME_NAME}${theme}.tar
+      rm -rf ${THEME_NAME}${theme}.tar.xz
   done
 
-  for color in "${_COLOR_VARIANTS[@]}"; do
-    for compact in "${_COMPA_VARIANTS[@]}"; do
-      tar -cf ${THEME_NAME}${color}${compact}.tar ${THEME_NAME}${color}${compact} ${THEME_NAME}${color}${compact}-beryl ${THEME_NAME}${color}${compact}-doder ${THEME_NAME}${color}${compact}-ruby
-    done
+  for theme in "${_THEME_VARIANTS[@]}"; do
+      tar -cf ${THEME_NAME}${theme}.tar ${THEME_NAME}${theme} ${THEME_NAME}-light${theme} ${THEME_NAME}-dark${theme} ${THEME_NAME}-compact${theme} ${THEME_NAME}-light-compact${theme} ${THEME_NAME}-dark-compact${theme}
   done
 }
 
 Xz_files() {
-  for color in "${_COLOR_VARIANTS[@]}"; do
-    for compact in "${_COMPA_VARIANTS[@]}"; do
-      xz -z ${THEME_NAME}${color}${compact}.tar
-    done
+  for theme in "${_THEME_VARIANTS[@]}"; do
+      xz -z ${THEME_NAME}${theme}.tar
   done
 }
 

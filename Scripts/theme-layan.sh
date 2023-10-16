@@ -4,8 +4,8 @@ THEME_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=Layan
 
-_COLOR_VARIANTS=('' '-light' '-dark')
-_SOLID_VARIANTS=('' '-solid')
+_COLOR_VARIANTS=('' '-Light' '-Dark')
+_SOLID_VARIANTS=('' '-Solid')
 
 if [ ! -z "${COLOR_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
