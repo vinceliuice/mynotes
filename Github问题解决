@@ -6,5 +6,7 @@ fatal: unable to access 'https://github.com/*/*.git/': Empty reply from server
 
 $ git remote set-url origin git@github.com:USERNAME/OTHERREPOSITORY.git
 
-
 https://blog.csdn.net/ywl470812087/article/details/104459288
+
+# 获取最新hosts文件
+sudo fetch-github-hosts -m=client
