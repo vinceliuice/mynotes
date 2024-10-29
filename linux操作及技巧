@@ -48,3 +48,16 @@ global: flatpak override --filesystem=xdg-config/gtk-4.0
 6. test theme on liadwaita
 
 GTK_THEME=WhiteSur-dark-blue:dark adwaita-1-demo
+
+7. Fedora 重新生成initramfs。
+$ sudo dracut --force
+
+8. nvidia-kernel-module-missing-falling-back-to-nouveau
+
+Remove the currently unsigned modules with
+sudo dnf remove kmod-nvidia-$(uname -r)
+
+Build the new signed modules with
+sudo akmods --force
+
+reboot.
