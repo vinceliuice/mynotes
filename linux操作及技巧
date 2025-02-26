@@ -50,7 +50,12 @@ global: flatpak override --filesystem=xdg-config/gtk-4.0
 GTK_THEME=WhiteSur-dark-blue:dark adwaita-1-demo
 
 7. Fedora 重新生成initramfs。
-$ sudo dracut --force
+
+重建当前内核：sudo dracut --force
+
+重建指定内核：sudo dracut --kver 6.10.6-200.fc40.x86_64 --force /boot/initramfs-6.10.6-200.fc40.x86_64.img
+
+重建所有内核：sudo dracut -f --regenerate-all
 
 8. nvidia-kernel-module-missing-falling-back-to-nouveau
 
@@ -61,3 +66,6 @@ Build the new signed modules with
 sudo akmods --force
 
 reboot.
+
+9. 检测链接文件有效性
+find . -xtype l -ls
